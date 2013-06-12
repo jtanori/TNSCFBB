@@ -14,8 +14,6 @@
 	    'backbone':            'vendor/backbone-min',
 	    'aspect':              'vendor/aspect',
       'iscroll':             'vendor/iscroll',
-      'codebird':            'vendor/codebird',
-      'sha1':                'vendor/sha1',
 	    'polyfill':            'polyfill',
       'config':              'config',
       'sync':                'sync',
@@ -26,9 +24,7 @@
 
       //Bootstrap plugins
       'bootstrap.transition': 'vendor/bootstrap/bootstrap-transition',
-      'bootstrap.collapse':   'vendor/bootstrap/bootstrap-collapse',
-      'bootstrap.modal':      'vendor/bootstrap/bootstrap-modal',
-      'bootstrap.alert':      'vendor/bootstrap/bootstrap-alert'
+      'bootstrap.modal':      'vendor/bootstrap/bootstrap-modal'
     },
 
     shim: {
@@ -40,31 +36,14 @@
 	  		deps: ['jquery', 'underscore'],
 	  		exports: 'Backbone'
 	  	},
-      'backbone.validation': {
-        deps: ['backbone'],
-        exports: 'Backbone.Validation'
+      mainRouter: {
+        deps: ['close', 'polyfill', 'history', 'sync']
       },
-	  	handlebars: {
-	  		exports: 'Handlebars'
-	  	},
       'jquery.cookies': {
         deps: ['jquery']
       },
 
-      codebird: {
-        deps: ['sha1'],
-        exports: 'window.Codebird'
-      },
-
       //Bootstrap shim
-      'bootstrap.collapse': {
-        deps: ['bootstrap.transition']
-      },
-
-      'bootstrap.alert': {
-        deps: ['bootstrap.transition']
-      },
-
       'bootstrap.modal': {
         deps: ['bootstrap.transition']
       }
@@ -90,15 +69,12 @@
       'jquery',
       'underscore',
       'backbone',
+      'close',
       'mainRouter',
       'config',
-      'close',
-      'sync',
-      'jquery.cookies',
-      'history',
-      'polyfill'
+      'jquery.cookies'
     ],
-    function($, _, Backbone, MainRouter, config) {
+    function($, _, Backbone, close, MainRouter, config) {
     	//Support json on cookie get/save
       $.cookie.json = true;
 

@@ -1,7 +1,23 @@
 @import "compass_twitter_bootstrap";
 
+body{
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+
 .content{
 	padding: 1em;
+}
+
+
+
+#iscroll{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 
 .loading-indicator{
@@ -17,7 +33,17 @@
 	padding: 0.5em;
 }
 
-.modal-body{
+
+.modal { 
+	position: fixed; 
+	top: 5%; 
+	right: 3%;
+	bottom: 5%; 
+	left: 3%; 
+	width: auto; 
+	margin: 0; 
+}
+.modal-body { 
 	text-align: center;
 }
 

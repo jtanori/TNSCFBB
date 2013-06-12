@@ -28,7 +28,9 @@ define(
       },
       header: null,
       refreshAfterMethods: [
-        'fillContent'
+        'fillContent',
+        'fillList',
+        'user'
       ],
       initialize: function(options){
         Page.prototype.initialize.call(this, Array.prototype.slice(arguments));

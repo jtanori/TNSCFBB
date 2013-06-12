@@ -66,7 +66,6 @@ define([
 			//Remove booting indicator
 			$('#app-boot').remove();
 			$body.find('[data-role="page"]').remove();
-			console.log(this.baseTemplate(data), 'page');
 			$body.append(this.baseTemplate(data));
 			//Cache the page
 			var $page = this.$page = $('#' + data.pageId);
@@ -104,7 +103,6 @@ define([
 
 		afterRender: function(){
 			this.delegateEvents();
-			console.log('after render');
 		},
 		setTitle: function(title){
 			var t = title || '';
@@ -126,7 +124,6 @@ define([
     },
 
     scrollRefresh: function(){
-    	console.log('Scroll refresh', arguments.callee.caller.caller.caller.arguments);
     	if(this.scroll && this.scroll instanceof iScroll){
     		setTimeout(function(){
     			this.scroll.refresh();

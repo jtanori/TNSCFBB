@@ -40,7 +40,6 @@ define(
         //create template
         this.$content.append(this.template());
 
-        console.log('fill content');
         return this;
       },
       //Auth? not really

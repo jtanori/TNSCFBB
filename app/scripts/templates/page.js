@@ -7,7 +7,6 @@ var interp;
 buf.push('<div');
 buf.push(attrs({ 'data-role':("page"), 'id':(pageId), "class": (className) }, {"data-role":true,"class":true,"id":true}));
 buf.push('>');
- console.log(content)
  if (content)
 {
 buf.push('' + ((interp = content) == null ? '' : interp) + '');
