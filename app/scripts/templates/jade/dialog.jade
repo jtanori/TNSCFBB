@@ -1,0 +1,17 @@
+div(id=modal.id, class=modal.className, role="dialog", aria-labelledby=modal.label.id, aria-hidden="true")
+	div(class="modal-header")
+		button(class="close", type="button", data-dismiss="modal", aria-hidden="true") X
+		h3(id=modal.label.id) #{modal.label.text}
+
+	div(class="modal-body")
+		| #{modal.content}
+
+	- if(modal.footer)
+		div(class="modal-footer")
+			- if(modal.footer.items)
+				- for button in modal.footer.items
+					button(class=button.className, data-dismiss=button.dismiss, aria-hidden=button.hidden)
+						- if(button.text) 
+							| #{button.text}
+						- else if(button.HTMLConten) 
+							! #{button.HTMLContent}

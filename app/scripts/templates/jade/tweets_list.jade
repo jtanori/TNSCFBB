@@ -1,0 +1,9 @@
+ul(id="tweets")
+	each tweet in tweets
+		li(class="clearfix", data-user-id=tweet.id)
+			a(href="#user/" + tweet.id, data-user-id=tweet.id)
+				img(class="thumbnail", src=tweet.thumbnail)
+			div(class="data push-left")
+				a(href="#user/" + tweet.id, data-user-id=tweet.id) #{tweet.name}
+				p #{tweet.text}
+				span(class="date") Postdate: #{tweet.date} Retweets: #{tweet.retweet_count}

@@ -1,0 +1,55 @@
+@import "compass_twitter_bootstrap";
+
+.content{
+	padding: 1em;
+}
+
+.loading-indicator{
+	padding: 0.5em;
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+}
+.ui-wrapper{
+	padding: 1em;
+}
+
+.ui-wrapper-a{
+	padding: 0.5em;
+}
+
+.modal-body{
+	text-align: center;
+}
+
+#tweets_container{
+	color: #fff;
+
+	ul {
+		margin: 0;
+		list-style: none;
+
+		li{
+			color: #ccc;
+			border-bottom: 1px solid #000;
+			border-top: 1px solid #444;
+			padding: 1em 0;
+			text-shadow: 1px 1px 1px #000;
+
+			a{
+				color: #ffff00;
+
+				&:hover{
+					cursor: pointer
+				}
+			}
+
+			.thumbnail{
+				float: left;
+			}
+
+			.data{
+				margin-left: 75px;
+			}
+		}
+	}
+}
